@@ -1,6 +1,4 @@
-basic.forever(function() {
     st7032.initLcd();
-    basic.pause(500)
     st7032.setPosition(0, 0);
     st7032.writeData("lcd write block");
     basic.pause(200)
@@ -12,5 +10,3 @@ basic.forever(function() {
     basic.pause(200)
     st7032.setPosition(3, 0);
     st7032.writeData("by masahiro hokari");
-    basic.pause(2000)
-})
