@@ -37,7 +37,7 @@ namespace st7032 {
         putCommand(0x0c);
     }
 
-    //% block="set position $x $y"
+    //% block="set position x $x y $y"
     export function setPosition(x:number,y:number): void {
         if((x > 3) || (y > 20)) return;
 
