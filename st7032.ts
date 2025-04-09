@@ -7,6 +7,7 @@ namespace st7032 {
     let topAddress = [0x00,0x40,0x14,0x54];
 
     //% block="put command $data"
+    //% block.loc.ja="コマンド|$data|の書き込み"
     export function putCommand(data: number) {
         let buf = pins.createBuffer(2);
         buf[0] = 0x00;
