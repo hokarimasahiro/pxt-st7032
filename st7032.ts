@@ -16,6 +16,7 @@ namespace st7032 {
     }
 
     //% block="put data $data"
+    //% block.loc.ja="データ|$data|の書き込み"
     export function putData(data: number) {
         let buf = pins.createBuffer(2);
         buf[0] = 0x40;
@@ -24,6 +25,7 @@ namespace st7032 {
     }
 
     //% block="set i2cAddress $ad"
+    //% block.loc.ja="i2cアドレスを|$ad|に変更する"
     export function setAddress(ad:number): void {
         i2cAddress = ad;
     }
@@ -31,6 +33,7 @@ namespace st7032 {
      * initLcd
      */
     //% block="init lcd"
+    //% block.loc.ja="lcdの初期化"
     export function initLcd(): void {
         putCommand(0x38);
         putCommand(0x01);
@@ -39,12 +42,14 @@ namespace st7032 {
     }
 
     //% block="set position x $x y $y"
+    //% block.loc.ja="表示開始位置を|$x|行、|$y|列にする"
     export function setPosition(x:number,y:number): void {
         if((x > 3) || (y > 20)) return;
 
         putCommand( 0x80 + topAddress[x] + y);
     }
     //% block="write data $dt"
+    //% block.loc.ja="$dt|を表示する"
     export function writeData(dt:string): void {
         for(let i = 0;i < dt.length;i++)
             putData(dt.charCodeAt(i));
