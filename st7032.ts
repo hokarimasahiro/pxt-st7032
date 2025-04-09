@@ -6,7 +6,7 @@ namespace st7032 {
     let i2cAddress = 0x3f;
     let topAddress = [0x00,0x40,0x14,0x54];
 
-    //% block="put command data $data"
+    //% block="put command $data"
     export function putCommand(data: number) {
         let buf = pins.createBuffer(2);
         buf[0] = 0x00;
