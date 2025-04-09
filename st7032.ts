@@ -1,7 +1,7 @@
 /**
  * lcd st7032 blocks
  */
-//% weight=100 color=#0fbc11 icon=""
+//% weight=100 color=#0fbc11 icon="\uf3fa"
 namespace st7032 {
     let i2cAddress = 0x3f;
     let topAddress = [0x00,0x40,0x14,0x54];
