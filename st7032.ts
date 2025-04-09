@@ -49,7 +49,7 @@ namespace st7032 {
         putCommand( 0x80 + topAddress[x] + y);
     }
     //% block="write data $dt"
-    //% block.loc.ja="$dt|を表示する"
+    //% block.loc.ja="lcdに|$dt|を表示する"
     export function writeData(dt:string): void {
         for(let i = 0;i < dt.length;i++)
             putData(dt.charCodeAt(i));
