@@ -3,13 +3,11 @@
     "description": "",
     "dependencies": {
         "core": "*",
-        "radio": "*",
         "microphone": "*"
     },
     "files": [
         "README.md",
-        "st7032.ts",
-        "test.ts"
+        "st7032.ts"
     ],
     "testFiles": [
         "test.ts"
