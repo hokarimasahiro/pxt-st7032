@@ -47,13 +47,13 @@ namespace st7032 {
     //% block.loc.ja="表示開始位置を|$x|行、|$y|列にする"
     export function setPosition(x:number,y:number): void {
         if((x > 3) || (y > 20)) return;
-        if(initFlag = 0) initLcd();
+        if(initFlag == 0) initLcd();
         putCommand( 0x80 + topAddress[x] + y);
     }
     //% block="write data $dt"
     //% block.loc.ja="lcdに|$dt|を表示する"
     export function writeData(dt:string): void {
-        if (initFlag = 0) initLcd();
+        if (initFlag == 0) initLcd();
         for(let i = 0;i < dt.length;i++)
             putData(dt.charCodeAt(i));
     }
